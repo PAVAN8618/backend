@@ -19,7 +19,7 @@ router.get("/", (req, res) => {
 router.get("/:id", (req, res) => {
   const book = books.find((b) => b.id === parseInt(req.params.id));
 
-  if (!book) return res.status(400).send("Book not found");
+  if (!book) return res.sendStatus(400).send("Book not found");
 
   res.json(book);
 });
@@ -29,13 +29,13 @@ router.post("/", (req, res) => {
   const id = books.length + 1;
   const newBook = new Book(id, title, author);
   books.push(newBook);
-  res.send(201).json(newBook);
+  res.sendStatus(201).json(newBook);
 });
 
 router.put("/:id", (req, res) => {
   const { title, author } = req.body;
   const book = find((b) => b.id === parseInt(req.params.id));
-  if (!book) return res.status(400).send("Book not found");
+  if (!book) return res.sendStatus(400).send("Book not found");
 
   book.title = title;
   book.author = author;

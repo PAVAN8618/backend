@@ -1,9 +1,8 @@
-class Book {
-  constructor(id, title, author) {
-    this.id = id;
-    this.title = title;
-    this.author = author;
-  }
-}
+const mongoose = require("mongoose");
+const bookSchema = new mongoose.Schema({
+  title: String,
+  author: String,
+  year: Number,
+});
 
-module.exports = Book;
+module.exports = bookSchema;

@@ -2,7 +2,7 @@ const { MongoClient } = require("mongodb");
 
 // Connection URI
 const uri =
-  "mongodb+srv://pnttiwari99:pnttiwari99@cluster0.lboljle.mongodb.net/"; // Replace this with your actual connection string
+  "mongodb+srv://pnttiwari99:LJwixichagV902Ai@first.bmxhnbk.mongodb.net/?retryWrites=true&w=majority&appName=first"; // Replace this with your actual connection string
 
 // Create a new MongoClient
 const client = new MongoClient(uri);
